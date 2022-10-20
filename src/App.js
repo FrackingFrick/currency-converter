@@ -9,6 +9,7 @@ function App() {
   function calculate(){
     setGbp(eur*0.87)
   }
+  
   return (
     <div>
       <h3>Currency converter</h3>
