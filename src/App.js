@@ -7,7 +7,7 @@ function App() {
   const [gbp, setGbp]=useState(0)
 
   function calculate(){
-    setGbp(eur*0.9)
+    setGbp(eur*0.87)
   }
   return (
     <div>
@@ -15,13 +15,13 @@ function App() {
       <form>
         <div>
           <label>EUR</label>
-          <input type="number" value={eur} onChange={e=>setEur(e.target.value)} />
+          <input data-testid="eur" value={eur} onChange={e=>setEur(e.target.value)} />
         </div>
         <div>
           <label>GBP</label>
-          <output>{gbp.toFixed(2)}</output>
+          <output data-testid="gbp">{gbp.toFixed(2)}</output>
         </div>
-        <button type="button" onClick={calculate}>Calculate</button> 
+        <button data-testid="calculate" type="button" onClick={calculate}>Calculate</button> 
       </form>
     </div>
   )
